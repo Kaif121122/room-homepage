@@ -1,0 +1,293 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'League Spartan', sans-serif;
+}
+
+:root {
+
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  max-width: 144rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-li {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--White);
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid var(--White);
+}
+
+.main-container {
+  max-width: 144rem;
+  margin: auto;
+  position: relative;
+}
+
+.top-container {
+  display: grid;
+  grid-template-columns: 0.7fr 0.5fr;
+  height: 53rem;
+}
+
+.top-img-container {
+  background-image: url('../src/images/desktop-image-hero-1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.top-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 8rem;
+}
+
+.common-h1 {
+  font-size: 3rem;
+  color: var(--Black);
+}
+
+.common-para {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--Dark-Gray);
+}
+
+.btn {
+  width: 20rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  text-align: left;
+  letter-spacing: 0.5rem;
+  background-color: var(--White);
+  color: var(--Black);
+  cursor: pointer;
+  font-family: 'League Spartan', sans-serif;
+  
+}
+
+.btn:hover {
+  color: var(--Dark-Gray);
+}
+
+.slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Black);
+  width: 15rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.left-slider,
+.right-slider {
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.left-slider:hover,
+.right-slider:hover {
+  background-color: var(--Very-Dark-Gray);
+}
+
+.bottom-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 30rem;
+}
+
+.first-bottom-img {
+  background-image: url('../src/images/image-about-dark.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.second-bottom-img {
+  background-image: url('../src/images/image-about-light.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.middle-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.common-h2 {
+  font-size: 2.5rem;
+}
+
+.open-menu {
+  display: none;
+}
+
+.close-menu {
+  display: none;
+}
+
+.close {
+  display: none !important;
+}
+
+/* MEDIA SECTION FOR LAPTOP SCREENS  */
+
+@media screen and (max-width:1024px) {
+  html {
+    font-size: 55%;
+  }
+
+  .content {
+    padding: 0 5rem;
+  }
+}
+
+/* MEDIA SECTION FOR TAB SCREENS  */
+
+
+@media screen and (max-width:768px) {
+
+  .top-container {
+    grid-template-columns: 1fr;
+    height: 120rem;
+  }
+
+  .bottom-container {
+    grid-template-columns: 1fr;
+    height: 170rem;
+  }
+}
+
+/* MEDIA SECTION FOR MOBILE  */
+
+@media screen and (max-width:550px) {
+
+  .header {
+    position: fixed;
+    gap: 0;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+  }
+
+  .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-ul {
+    display: none;
+    background-color: var(--White);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12rem;
+    z-index: 9;
+    justify-content: flex-end;
+    padding-right: 2rem;
+  }
+
+  .menu-icons {
+    position: absolute;
+    top: 0rem;
+    left: 2.5rem;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+
+
+  .open-menu {
+    display: block;
+  }
+
+  .nav-link {
+    color: var(--Black);
+  }
+
+  .top-container {
+    height: 120rem;
+  }
+
+  .slider-container {
+    top: -4.8rem;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    width: 12rem;
+  }
+
+  .left-slider,
+  .right-slider {
+    cursor: pointer;
+    padding: 1rem;
+  }
+
+  .bottom-container {
+    height: 96rem;
+  }
+
+  .open {
+    display: flex !important;
+  }
+
+
+}
